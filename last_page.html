@@ -1,0 +1,593 @@
+<html lang="en"><head>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5T9BG2J9HC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-5T9BG2J9HC');
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="lcraa recording software [lcraa-warden]" name="description">
+    <meta content="Antares, LLC" name="author">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="https://cdn.lcraa.net/icons/eClerks-registered/manifest.json"> 
+    <title>Home - eClerks LA</title>
+    
+    <link href="https://cdn.lcraa.net/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.lcraa.net/lib/font-awesome/css/all.min.css" rel="stylesheet">
+    <link href="/css/eClerks/fonts.css?v=3WYoSNP5Hs1d4xQ6F9x7jarZV4Wu3qVQVmwOZ7WIyMs" rel="stylesheet">
+    <link href="/css/eClerks/dtp_landing1.css?v=7U1Oko-y9BhXk0ft8XqUT1nn9pgJAh8DH58B2iyrRnU" rel="stylesheet">
+    <link href="/css/eClerks/dtp_landing2.css?v=J4cOxH09Xk52ez0CZPouC0N5kNnjU9wx1Q9mWyZ-Jls" rel="stylesheet">
+    <link href="/css/eClerks/landing.css?v=SpDdUWP8POjN6TqbwWD_h65DIMSaQG9m-Q8K4YqjCdI" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
+    <link href="/css/mvc-grid/mvc-grid.css" rel="stylesheet">
+</head>
+<body class="modal-open" style="padding-right: 15px;">
+        <div id="modal-placeholder">
+<div class="modal show" id="criminalSearchDecisionTree" tabindex="-1" role="dialog" aria-modal="true" style="padding-right: 15px; display: block;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title statewide-portal-decision-tree-title">Criminal Search</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form id="criminal-search-decision" action="/home/criminalsearchdecisiontree" method="post">
+
+                        <div class="text-danger validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+                        <input name="IsValid" type="hidden" value="True">
+                        <label id="misc-error" class="text-danger"></label>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm statewide-portal-decision-tree-login">
+                                        <div class="form-group input-group login-border">
+                                            <span class="fas fa-user input-group-addon login-ico"></span>
+                                            <input class="form-control login-input" placeholder="email address" type="email" data-val="true" data-val-email="The Email Address field is not a valid e-mail address." data-val-required="The Email Address field is required." id="UserEmail" name="UserEmail" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm statewide-portal-decision-tree-login">
+                                        <div class="form-group input-group login-border">
+                                            <span class="fa-lock fas input-group-addon login-ico"></span>
+                                            <input class="form-control login-input" placeholder="password" type="password" data-val="true" data-val-required="The Password field is required." id="UserPassword" name="UserPassword">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-bottom: 40px">
+                                    <div class="col-sm statewide-portal-decision-tree-login">
+                                        <div class="form-group">
+                                            <button id="login" class="btn btn-block btn-lg btn-primary card-button-login" title="Login" type="button" data-process-login-criminal-search="modal">LOGIN</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="statewide-portal-decision-tree-hr">
+                                <div class="container" style="margin-bottom: 20px">
+                                    <div class="row">
+                                        <div class="col-sm text-center statewide-portal-decision-tree-register">Don't have an account?</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm text-center"><button type="button" class="btn btn-small gray-btn" onclick="location.href=&quot;/Identity/Account/Register&quot;" title="eClerks LA Account: Sign Up Here">Sign Up Here</button></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8DZNwr4GgjZKifwB48FV8-hMUjjVcMxXNVfD0wH188IkHDL5RU0sigt794GkWxZCaQKfjZHNorQUL6KWn0YzvMf5TPhJqsQ0P6B3DUAhkoRpUn8Vse6L1ItgoeUf-qhTTMiiOheLQZilncb-kBOOzrI"></form>
+            </div>
+
+            <div class="modal-footer">
+                <button id="close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+<header>
+    <div class="topNav">
+        <div class="container">
+            <h5 class="font-weight-normal mr-md-auto my-0">
+                <a title="Home" href="/home">
+                    <img alt="eClerks LA logo" class="header-logo" src="https://cdn.lcraa.net/images/eClerks-registered.png">
+                </a>
+            </h5>
+            <nav class="mr-md-3 my-2 my-md-0">
+                <a class="index-nav-link nav-link p-2 text-dark" title="Home" href="/home">Home</a>
+                <a class="index-nav-link nav-link p-2 text-dark" title="About LCRAA" href="/about">About LCRAA</a>
+                <a class="index-nav-link nav-link p-2 text-dark" title="Need Help?" href="/contact">Need Help?</a>
+
+            </nav>
+        </div>
+    </div>
+    <div class="header-login">
+        <div class="container">
+                <div class="text-danger eclerks-home-validation validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+                <form id="account_header" method="post" class="header-login-form" action="/home/login">
+                    <div class="form-group input-group login-border">
+                        <span class="fas fa-user input-group-addon login-ico"></span>
+                        <input class="form-control login-input" placeholder="email address" type="email" data-val="true" data-val-email="The Email Address field is not a valid e-mail address." data-val-required="The Email Address field is required." id="Email" name="Email" value="">
+                    </div>
+                    <div class="form-group input-group login-border">
+                        <span class="fa-lock fas input-group-addon login-ico"></span>
+                        <input class="form-control login-input" placeholder="password" type="password" data-val="true" data-val-required="The Password field is required." id="Password" name="Password">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-block btn-lg btn-primary card-button-login" title="Login" type="submit">LOGIN</button>
+                    </div>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8DZNwr4GgjZKifwB48FV8-gCv7mJiFjY-rUQNRzFKv_NGtTnzIm4blKOTQMOKcvlvuqPgu-ZlUPxousMx9xdr5Xon93w6u9JhJ_VvMbImbp_oc1c0TQVCWCQvacynmcedsSDJRpBlDrGgjHueuzfl8A"></form>
+        </div>
+    </div>
+</header>
+
+
+<div id="bannerMessage" class="mx-auto pb-md-4 pt-md-5 px-3 py-3 text-center welcome-header">
+    <h1 class="welcome-header-title">Welcome to eClerks LA</h1>
+    <h2 class="large-text welcome-header-msg">Providing options to do business with the Louisiana Clerks of Court</h2>
+</div>
+
+
+
+<div class="cards-wrapper">
+    <main class="cards">
+        <div class="phone">
+            
+<div class="new_card">
+    <div class="top fraud-alert-modal-form">
+        <h2 class="module-header">Sign Up for<br>eClerks Alert</h2>
+        <div>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAH2UlEQVR4nO2ceXAURRjF2/sqTywhO71ZzXZvYsAIRBBEblAU5FBuFbUALxAkKFIqkEISKK4IkuK+siQ9WSFAQFQOQVCohHAomHCYgMoZknAJgiRp65tsB0KCm71mZjfzqt4/s5vM17/t6emZfjMIGTJkyJAhQ8EkR6g1mmGaziRSyDApkCW6Ug6xNtS6roCQjK3PM4lcljHl15pJ9BIzk+e0rk/XWm6xPCBjehKAZQ3vyy/kJCreHtNbgDwJ39G6Tt2KYZoAoH7o1p7zwiTOi+xlLkxStik9EdMErevUpZJDbBGyRP5NtYTz09smX4Xn9JntU3mqxcYZJldSzNa6WterO8mYrFEO3Zg+leAJi0OZYbJO63p1JWYinQBMWmQUv5Q7+4YALx+aw9PqRikQUyTaUeu6dSFHZOTtDJN9AGX/9ME3hCe8f9ogcVY+uIaQO1BNl4zpcACypnlTXpK/2CXA0vzF/NtWzcogmm0xqCYrqXbYI0yipwHGsVVjXMITPrFmbNm0RqJnHRZLHVRTxTCZAyA2v9qx2vCEN/d90Tk3JLNRTZTDROszTIsdj0bwczu/dBvg+d3TuOOxCIBYkmIOfwrVNDGJboIetPuzfm7DE971aT8xrfmJI3QTqilKNVl7QsNXRNXn//4512OAV/6az1c82cA5HpIeqCbIgfFdskQOQaNz58V4DE84d+4wcZ38Z3pIyN0o2MUwGQ0N/q5dc156yvW0xeW0piCJr32+hTiUR6FglgNTScbkb2hs/tpxXsMTPrUhnstmG0yuLzpCwkJRsEqWaDLA29q/q8/gCf/cv6u4QlmCglEOk7Upw7T0a2sk/3vvDJ8DvJA9g39NIuF2V6nDbHsWBZPGIHQzk0gG9JA94wb4HJ7wni/6i3uGO2CfKFgkY/IWNGxlw4b8ytEFLkEU5M3lR3JmVjBsc/V3xccX8PRGTzmvk+mbKBi0olb4vbJEjkGjDi8ZUa2e9GHM27xxq5cqGLZV528P20eI6+QTdkLuQ4EuGdMJ0KB1HVtXvE3vJ4Cwjw2d24q54XgUyEoOpWGwmpYaauOFmydUeyzzCmCRnRf9NJHDPmF1L1kKoyhQxSSyHHpCxuAebp0MvAUIzhjUXVzipaFAVIpkawMNWBpel188MFN1gP/8PpMvC6/nPKEE2HqyA6FbmER+heKzJ7/r9nTEFwDB2ZPeEZPr3zailreiQBHDdDAUvrpJY15yYpFmAEtOLuLfNGtStgiFbYNQICg5NPRBGZNTUPSRZZ+53WhfAgQfWfq5mNYUpZkiaiG9i0lkOhS88ZX2HjXY1wDBm3p0ELf/pyE9i9Whj4t0wZmMKboBeDbraqrBgcOfQHoVk+h38Evv+Livx431B0Dwjo/6iF64HulRzGztUp10gVYALx++JtVgtnZGeksXyJjsh+IOJA7xqqH+Agg+MOMDcUL5XVepBhmTEe6kC7QCCEsI37Z2phow/RjpKF1wBoo6vjrW60b6E+C1qQaGyTl7aESIHk4c86GgLa938kkD/Q0QvOW1TuJQnqcpvBQTaQDJACVdsGtawAA8/8v08lSDjG2NNAMoS2Qz/JK/jH7TZ41TAyB496g3xFi4VZNUQyqmfXyRLtAKIKQaVtZ3phow7a1+ugCTw7DzvAXepwu0AAjOnR8jAP6VVDvqHtUAMonGwo6/b99cSQYEKsCyVENLccsrVhV4dolgJV1gtvH89XE+b5SaAMEFG8eXpxqW1HnU4neAskRk+MW2vf2yXxqkNkDw1oHdnL2QML/CYybrM1fTBV8FDUB4GmopjRTjYQt/pgsyYSd74/2XLuBFdr4v6yuesWlKBcM2f+5zb9wAAXCnX1INMrYNgB2kR0dXK13AA8yQaljV2JlqwKS/39IFf7CRmjeW+8l/pIwsf6jRERZ2v88AyhKZBP94fac21U4X8AD1hi7txHryRJ/AY2ZiLU8XbJmoeQO5n1308yQOSxKQamCmCJv3ADFNh18kc0hP1Rpx8fhCnjBlOO/Wq4/iL6d8pGxTa/+ZH/QUd2tWegfPZGvrabqAe+jSwqQqpzGDhw5QPlOjhn8OzuLLIspSDSnY2sEjeLCSzyS6B/5JTsL7qv362ZnTK8ETztnuu1tmrpwz9T0xFmbPjo6+zf3eJ5GhSrqgqWfpAu6h166KuyHAdavjVaujLNXwtHi0dohb8Bw48iHlbRmY8qPLR6lWNC+y87xfE28I8NCeRFVrOZo2qjzVkBxie9iN3kcTlXRB9+dULZg7HR83tBI82KZFLT/2ekEcyjOq1/tCSSSs4MNK/plMz9MF3AuXFNj5MhbLhw4bqDhNjlXtBHK9z2YlcAdMazAtTpFsUS4ByhL9HojvHPmaJgVzHXrnJ6+KVMMGV4fuy0q6oO4T/HLeHM0L5zoxpBqW13vSOa2h3f4nXUAPwJcOztJmvOE69sGZQ8RYmLvQYrmzikOXfAhfgJV7eC+B1gVznVl5V4Mz1QCsqhr79moxbeEBZDGtgfhyVePfJfiw+IR615w8wFx8bIFYS75Q1SGsPATtr4UiHgTOXzeu/J01lQFiEicu3Qo2jTfGwaKK4x+s3kFo3nllMrYSQHhcnkk06/r39hmm173HkGRCsKDKqQyszjNM4plE8mDmbcCjYswrhumLLJFxNeK9DIYMGTJkyJAhQ4aQK/0HreukpzkJvqMAAAAASUVORK5CYII=">
+        </div>        
+        <p class="module-text">FREE - Personalized monitoring for Land/Criminal Records across Louisiana parishes.</p>
+    </div>
+    <a class="button blue-btn fraud-alert-button" title="eClerks Alert" href="/identity/account/manage/eclerksalert">Manage</a>
+</div>
+
+        </div>
+        
+<div class="new_card">
+    <form id="statewidePortal">
+        <div class="top statewide-portal-modal-form">
+            <h2 class="module-header">Statewide Portal</h2>
+            <p class="module-text">FREE - Quickly locate Land Records, Marriage Licenses, and Civil Information.</p>
+        </div>
+        <a id="statewide-portal-step1" href="javascript:void(0)" class="button blue-btn" data-toggle="ajax-modal" data-url="/home/statewideportaldecisiontree" title="Statewide Portal Search">Search</a>
+    </form>
+</div>
+
+        
+<div class="new_card">
+    <form id="parishSearch">
+        <div class="top parish-search-modal-form">
+            <h2 class="module-header">Parish Search</h2>
+            <p class="module-text">Purchase subscriptions, search records, view and print images of documents.</p>
+            <select id="Input_ParishSearchId"><option value="">Select a Parish</option><option value="acadia">Acadia</option>
+<option value="allen">Allen</option>
+<option value="ascension">Ascension</option>
+<option value="assumption">Assumption</option>
+<option value="avoyelles">Avoyelles</option>
+<option value="beauregard">Beauregard</option>
+<option value="bienville">Bienville</option>
+<option value="bossier">Bossier</option>
+<option value="caddo">Caddo</option>
+<option value="calcasieu">Calcasieu</option>
+<option value="caldwell">Caldwell</option>
+<option value="cameron">Cameron</option>
+<option value="catahoula">Catahoula</option>
+<option value="claiborne">Claiborne</option>
+<option value="concordia">Concordia</option>
+<option value="desoto">DeSoto</option>
+<option value="eastbatonrouge">East Baton Rouge</option>
+<option value="eastcarroll">East Carroll</option>
+<option value="eastfeliciana">East Feliciana</option>
+<option value="evangeline">Evangeline</option>
+<option value="franklin">Franklin</option>
+<option value="grant">Grant</option>
+<option value="iberia">Iberia</option>
+<option value="iberville">Iberville</option>
+<option value="jackson">Jackson</option>
+<option value="jefferson">Jefferson</option>
+<option value="jeffersondavis">Jefferson Davis</option>
+<option value="lafayette">Lafayette</option>
+<option value="lafourche">Lafourche</option>
+<option value="lasalle">LaSalle</option>
+<option value="lincoln">Lincoln</option>
+<option value="livingston">Livingston</option>
+<option value="madison">Madison</option>
+<option value="morehouse">Morehouse</option>
+<option value="natchitoches">Natchitoches</option>
+<option value="orleans">Orleans</option>
+<option value="ouachita">Ouachita</option>
+<option value="plaquemines">Plaquemines</option>
+<option value="pointecoupee">Pointe Coupee</option>
+<option value="rapides">Rapides</option>
+<option value="redriver">Red River</option>
+<option value="richland">Richland</option>
+<option value="sabine">Sabine</option>
+<option value="stbernard">St. Bernard</option>
+<option value="stcharles">St. Charles</option>
+<option value="sthelena">St. Helena</option>
+<option value="stjames">St. James</option>
+<option value="stjohn">St. John the Baptist</option>
+<option value="stlandry">St. Landry</option>
+<option value="stmartin">St. Martin</option>
+<option value="stmary">St. Mary</option>
+<option value="sttammany">St. Tammany</option>
+<option value="tangipahoa">Tangipahoa</option>
+<option value="tensas">Tensas</option>
+<option value="terrebonne">Terrebonne</option>
+<option value="union">Union</option>
+<option value="vermilion">Vermilion</option>
+<option value="vernon">Vernon</option>
+<option value="washington">Washington</option>
+<option value="webster">Webster</option>
+<option value="westbatonrouge">West Baton Rouge</option>
+<option value="westcarroll">West Carroll</option>
+<option value="westfeliciana">West Feliciana</option>
+<option value="winn">Winn</option>
+</select>
+        </div>
+        <a id="parish-search-step1" href="javascript:void(0)" class="button small-btn" data-toggle="ajax-modal" data-url="/home/parishsearchdecisiontree" title="Parish Search">Go to Search</a>
+    </form>
+</div>
+
+        
+<div class="new_card">
+    <div class="top ebulletin-board-modal-form">
+        <h2 class="module-header">LCRAA<br>eBulletin Board</h2>
+        <p class="module-text">Find the latest parish notices, scheduled meetings, and holiday calendar here.</p>
+    </div>
+    <a class="button blue-btn" href="https://www.laclerksofcourt.org/bulletin-board" target="_blank" title="LCRAA eBulletin Board">Visit</a>
+</div>
+
+        <div class="phone-off">
+            
+<div class="new_card">
+    <div class="top fraud-alert-modal-form">
+        <h2 class="module-header">Sign Up for<br>eClerks Alert</h2>
+        <div>
+            <img src="data:image/png;base64,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">
+        </div>        
+        <p class="module-text">FREE - Personalized monitoring for Land/Criminal Records across Louisiana parishes.</p>
+    </div>
+    <a class="button blue-btn fraud-alert-button" title="eClerks Alert" href="/identity/account/manage/eclerksalert">Manage</a>
+</div>
+
+        </div>
+        
+<div class="new_card">
+    <form id="eRecording">
+        <div class="top eRecording-modal-form">
+            <h2 class="module-header">eRecording</h2>
+            <p class="module-text">eRecord documents directly with participating parishes.</p>
+            <select id="Input_eRecordingId"><option value="">Select a Parish</option><option value="acadia">Acadia</option>
+<option value="allen">Allen</option>
+<option value="ascension">Ascension</option>
+<option value="assumption">Assumption</option>
+<option value="avoyelles">Avoyelles</option>
+<option value="beauregard">Beauregard</option>
+<option value="bienville">Bienville</option>
+<option value="bossier">Bossier</option>
+<option value="caddo">Caddo</option>
+<option value="calcasieu">Calcasieu</option>
+<option value="caldwell">Caldwell</option>
+<option value="cameron">Cameron</option>
+<option value="catahoula">Catahoula</option>
+<option value="claiborne">Claiborne</option>
+<option value="concordia">Concordia</option>
+<option value="desoto">DeSoto</option>
+<option value="eastbatonrouge">East Baton Rouge</option>
+<option value="eastcarroll">East Carroll</option>
+<option value="eastfeliciana">East Feliciana</option>
+<option value="evangeline">Evangeline</option>
+<option value="franklin">Franklin</option>
+<option value="grant">Grant</option>
+<option value="iberia">Iberia</option>
+<option value="iberville">Iberville</option>
+<option value="jackson">Jackson</option>
+<option value="jefferson">Jefferson</option>
+<option value="jeffersondavis">Jefferson Davis</option>
+<option value="lafayette">Lafayette</option>
+<option value="lafourche">Lafourche</option>
+<option value="lasalle">LaSalle</option>
+<option value="lincoln">Lincoln</option>
+<option value="livingston">Livingston</option>
+<option value="madison">Madison</option>
+<option value="morehouse">Morehouse</option>
+<option value="natchitoches">Natchitoches</option>
+<option value="orleans">Orleans</option>
+<option value="ouachita">Ouachita</option>
+<option value="plaquemines">Plaquemines</option>
+<option value="pointecoupee">Pointe Coupee</option>
+<option value="rapides">Rapides</option>
+<option value="redriver">Red River</option>
+<option value="richland">Richland</option>
+<option value="sabine">Sabine</option>
+<option value="stbernard">St. Bernard</option>
+<option value="stcharles">St. Charles</option>
+<option value="sthelena">St. Helena</option>
+<option value="stjames">St. James</option>
+<option value="stjohn">St. John the Baptist</option>
+<option value="stlandry">St. Landry</option>
+<option value="stmartin">St. Martin</option>
+<option value="stmary">St. Mary</option>
+<option value="sttammany">St. Tammany</option>
+<option value="tangipahoa">Tangipahoa</option>
+<option value="tensas">Tensas</option>
+<option value="terrebonne">Terrebonne</option>
+<option value="union">Union</option>
+<option value="vermilion">Vermilion</option>
+<option value="vernon">Vernon</option>
+<option value="washington">Washington</option>
+<option value="webster">Webster</option>
+<option value="westbatonrouge">West Baton Rouge</option>
+<option value="westcarroll">West Carroll</option>
+<option value="westfeliciana">West Feliciana</option>
+<option value="winn">Winn</option>
+</select>
+        </div>
+        <a id="eRecording-step1" href="javascript:void(0)" class="button small-btn" data-toggle="ajax-modal" data-url="/home/erecordingdecisiontree" title="eRecording">Go to eRecording</a>
+    </form>
+</div>
+
+        
+<div class="new_card">
+    <form id="eFiling">
+        <div class="top eFiling-modal-form">
+            <h2 class="module-header" style="margin-bottom: 0">eFiling</h2>
+            <a class="legal-notice" href="https://fluxconsole.com/files/item/505/200529/PROCEDURES%20FOR%20ELECTRONIC%20FILING%20AND%20STORAGE%20OF%20PLEADINGS.pdf" target="_blank">* eFiling Rules</a>
+            <p class="module-text">Open court cases and e-file documents to courts at anytime from anywhere.</p>
+            <select id="Input_eFilingId"><option value="">Select a Parish</option><option value="acadia">Acadia</option>
+<option value="allen">Allen</option>
+<option value="ascension">Ascension</option>
+<option value="assumption">Assumption</option>
+<option value="avoyelles">Avoyelles</option>
+<option value="beauregard">Beauregard</option>
+<option value="bienville">Bienville</option>
+<option value="bossier">Bossier</option>
+<option value="caddo">Caddo</option>
+<option value="calcasieu">Calcasieu</option>
+<option value="caldwell">Caldwell</option>
+<option value="cameron">Cameron</option>
+<option value="catahoula">Catahoula</option>
+<option value="claiborne">Claiborne</option>
+<option value="concordia">Concordia</option>
+<option value="desoto">DeSoto</option>
+<option value="eastbatonrouge">East Baton Rouge</option>
+<option value="eastcarroll">East Carroll</option>
+<option value="eastfeliciana">East Feliciana</option>
+<option value="evangeline">Evangeline</option>
+<option value="franklin">Franklin</option>
+<option value="grant">Grant</option>
+<option value="iberia">Iberia</option>
+<option value="iberville">Iberville</option>
+<option value="jackson">Jackson</option>
+<option value="jefferson">Jefferson</option>
+<option value="jeffersondavis">Jefferson Davis</option>
+<option value="lafayette">Lafayette</option>
+<option value="lafourche">Lafourche</option>
+<option value="lasalle">LaSalle</option>
+<option value="lincoln">Lincoln</option>
+<option value="livingston">Livingston</option>
+<option value="madison">Madison</option>
+<option value="morehouse">Morehouse</option>
+<option value="natchitoches">Natchitoches</option>
+<option value="orleans">Orleans</option>
+<option value="ouachita">Ouachita</option>
+<option value="plaquemines">Plaquemines</option>
+<option value="pointecoupee">Pointe Coupee</option>
+<option value="rapides">Rapides</option>
+<option value="redriver">Red River</option>
+<option value="richland">Richland</option>
+<option value="sabine">Sabine</option>
+<option value="stbernard">St. Bernard</option>
+<option value="stcharles">St. Charles</option>
+<option value="sthelena">St. Helena</option>
+<option value="stjames">St. James</option>
+<option value="stjohn">St. John the Baptist</option>
+<option value="stlandry">St. Landry</option>
+<option value="stmartin">St. Martin</option>
+<option value="stmary">St. Mary</option>
+<option value="sttammany">St. Tammany</option>
+<option value="tangipahoa">Tangipahoa</option>
+<option value="tensas">Tensas</option>
+<option value="terrebonne">Terrebonne</option>
+<option value="union">Union</option>
+<option value="vermilion">Vermilion</option>
+<option value="vernon">Vernon</option>
+<option value="washington">Washington</option>
+<option value="webster">Webster</option>
+<option value="westbatonrouge">West Baton Rouge</option>
+<option value="westcarroll">West Carroll</option>
+<option value="westfeliciana">West Feliciana</option>
+<option value="winn">Winn</option>
+</select>
+        </div>
+        <a id="eFiling-step1" href="javascript:void(0)" class="button small-btn" data-toggle="ajax-modal" data-url="/home/efilingdecisiontree" title="eFiling">Go to eFiling</a>
+    </form>
+</div>
+
+        
+<div class="new_card">
+    <form id="marriageApplication">
+        <div class="top marriage-modal-form">
+            <h2 class="module-header">Marriage Application</h2>
+            <p class="module-text">Using this process helps expedite your marriage application.</p>
+            <select id="Input_MarriageApplicationId"><option value="">Select a Parish</option><option value="acadia">Acadia</option>
+<option value="allen">Allen</option>
+<option value="ascension">Ascension</option>
+<option value="assumption">Assumption</option>
+<option value="avoyelles">Avoyelles</option>
+<option value="beauregard">Beauregard</option>
+<option value="bienville">Bienville</option>
+<option value="bossier">Bossier</option>
+<option value="caddo">Caddo</option>
+<option value="calcasieu">Calcasieu</option>
+<option value="caldwell">Caldwell</option>
+<option value="cameron">Cameron</option>
+<option value="catahoula">Catahoula</option>
+<option value="claiborne">Claiborne</option>
+<option value="concordia">Concordia</option>
+<option value="desoto">DeSoto</option>
+<option value="eastbatonrouge">East Baton Rouge</option>
+<option value="eastcarroll">East Carroll</option>
+<option value="eastfeliciana">East Feliciana</option>
+<option value="evangeline">Evangeline</option>
+<option value="franklin">Franklin</option>
+<option value="grant">Grant</option>
+<option value="iberia">Iberia</option>
+<option value="iberville">Iberville</option>
+<option value="jackson">Jackson</option>
+<option value="jefferson">Jefferson</option>
+<option value="jeffersondavis">Jefferson Davis</option>
+<option value="lafayette">Lafayette</option>
+<option value="lafourche">Lafourche</option>
+<option value="lasalle">LaSalle</option>
+<option value="lincoln">Lincoln</option>
+<option value="livingston">Livingston</option>
+<option value="madison">Madison</option>
+<option value="morehouse">Morehouse</option>
+<option value="natchitoches">Natchitoches</option>
+<option value="orleans">Orleans</option>
+<option value="ouachita">Ouachita</option>
+<option value="plaquemines">Plaquemines</option>
+<option value="pointecoupee">Pointe Coupee</option>
+<option value="rapides">Rapides</option>
+<option value="redriver">Red River</option>
+<option value="richland">Richland</option>
+<option value="sabine">Sabine</option>
+<option value="stbernard">St. Bernard</option>
+<option value="stcharles">St. Charles</option>
+<option value="sthelena">St. Helena</option>
+<option value="stjames">St. James</option>
+<option value="stjohn">St. John the Baptist</option>
+<option value="stlandry">St. Landry</option>
+<option value="stmartin">St. Martin</option>
+<option value="stmary">St. Mary</option>
+<option value="sttammany">St. Tammany</option>
+<option value="tangipahoa">Tangipahoa</option>
+<option value="tensas">Tensas</option>
+<option value="terrebonne">Terrebonne</option>
+<option value="union">Union</option>
+<option value="vermilion">Vermilion</option>
+<option value="vernon">Vernon</option>
+<option value="washington">Washington</option>
+<option value="webster">Webster</option>
+<option value="westbatonrouge">West Baton Rouge</option>
+<option value="westcarroll">West Carroll</option>
+<option value="westfeliciana">West Feliciana</option>
+<option value="winn">Winn</option>
+</select>
+        </div>
+        <a id="marriage-application-step1" href="javascript:void(0)" class="button small-btn" data-toggle="ajax-modal" data-url="/home/marriageapplicationdecisiontree" title="Marriage Application">Go to Application</a>
+    </form>
+</div>
+       
+        
+<div class="new_card">
+    <div class="top criminal-search-modal-form">
+        <h2 class="module-header">Criminal Search</h2>
+        <div>
+            <img src="data:image/png;base64,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">
+        </div>        
+        <p class="module-text">Search for Criminal Records across Louisiana parishes.</p>
+    </div>
+    <a id="criminal-search-step1" href="javascript:void(0)" class="button blue-btn" data-toggle="ajax-modal" data-url="/home/criminalsearchdecisiontree" title="Statewide Portal CriminalSearchTitle">Search</a>
+</div>
+
+    </main>
+</div>
+
+        
+<footer class="footer">
+    <div class="align-items-center bg-white border-bottom box-shadow d-flex flex-column flex-md-row footer-div lower-footer-border mb-3 p-3 px-md-4">
+        <h5 class="font-weight-normal my-0">
+            <div>
+                <a class="antares-link btn btn-outline-transparent" href="https://www.antaresnet.com/" target="_blank" title="Antares LLC">
+                    <span class="antares-powered-by">
+                        powered by<br>
+                        <span class="antares-powered-by-text">
+                            <img alt="antares logo" class="antares-powered-by-icon" src="/img/eClerks/logo.svg">
+                        </span>
+                    </span>
+                </a>
+            </div>
+        </h5>
+        <nav class=" lcraa-mid-section">
+            <span class="lcraa-name">
+                Louisiana Clerks' Remote Access Authority<br>
+                <span class="lcraa-desc">
+                    10202 Jefferson Hwy. Building A | Baton Rouge, LA 70809
+                </span>
+                <br>
+                <a class="index-nav-link nav-link terms-link text-dark" title="Home" href="/home">Home</a>
+
+
+                <a class="index-nav-link nav-link terms-link text-dark" title="Privacy Policy" href="/privacy">Privacy Policy</a>
+                <a class="index-nav-link nav-link terms-link text-dark" title="Terms of Service" href="/terms">Terms of Service</a>
+                <span class="lcraa-desc">app icons by </span><a href="https://icons8.com" target="_blank">Icons8</a>
+            </span>
+        </nav>
+        <a class="btn btn-outline-transparent contact-link" title="Contact Us" href="/contact">
+            <span class="contact-questions">
+                Questions?<br>
+                <span class="contact-text">
+                    <span class="contact-co">Contact Us</span>
+                </span>
+            </span>
+        </a>
+    </div>
+</footer>
+
+    <script src="https://cdn.lcraa.net/lib/jquery/jquery.min.js"></script>
+    <script src="https://cdn.lcraa.net/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.lcraa.net/lib/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace()
+    </script>
+    <script src="/js/mvc-grid/mvc-grid.js"></script>
+    <script>
+        [].forEach.call(document.getElementsByClassName('mvc-grid'), function (element) { new MvcGrid(element); });
+    </script>
+    <script src="/js/masked-input/jquery.maskedinput.min.js"></script>
+    <script src="/js/holder/holderjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.3.200/build/pdf.min.js"></script>
+    <script src="/js/eClerks/landing.js?v=T-eIjOxduDK4Kru1H_FU8jZfudIaO5LrTodf3DBJ1rA"></script>
+    
+    <link rel="canonical" href="https://www.eclerksla.com/home/">
+
+    <style>
+        .phone {
+            display: none;
+        }
+
+        .phone-off {
+            display: contents;
+        }
+
+        @media (max-width: 767px) {
+            .phone {
+                display: block;
+            }
+
+            .phone-off {
+                display: none;
+            }
+        }
+    </style>
+
+
+
+<div class="modal-backdrop show"></div></body></html>

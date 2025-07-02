@@ -1,0 +1,88 @@
+{% extends 'scraper/base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criminal Records</title>
+</head>
+<body>
+    <h1>Criminal Records</h1>
+    <table border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Case Number</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td>{{ record.name }}</td>
+                <td>{{ record.case_number }}</td>
+                <td>{{ record.date }}</td>
+                <td>{{ record.status }}</td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="4">No records found.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+{% block content %}
+<h2>Criminal Records</h2>
+
+<form method="get" class="mb-3">
+    <div class="input-group">
+        <input type="text" name="q" class="form-control" placeholder="Search by name, case number, or parish" value="{{ request.GET.q }}">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>
+
+<p>Total records: {{ records.paginator.count }}</p>
+
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Case #</th>
+            <th>Parish</th>
+            <th>Date Filed</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in records %}
+        <tr>
+            <td>{{ record.defendant_name }}</td>
+            <td>{{ record.case_number }}</td>
+            <td>{{ record.parish }}</td>
+            <td>{{ record.date_filed }}</td>
+            <td><a href="{% url 'record_detail' record.pk %}" class="btn btn-sm btn-info">View</a></td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5" class="text-center">No records found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<nav>
+  <ul class="pagination">
+    {% if records.has_previous %}
+      <li class="page-item"><a class="page-link" href="?page={{ records.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">Previous</a></li>
+    {% endif %}
+
+    <li class="page-item disabled"><a class="page-link">Page {{ records.number }} of {{ records.paginator.num_pages }}</a></li>
+
+    {% if records.has_next %}
+      <li class="page-item"><a class="page-link" href="?page={{ records.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">Next</a></li>
+    {% endif %}
+  </ul>
+</nav>
+
+{% endblock %}

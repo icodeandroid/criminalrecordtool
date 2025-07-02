@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="lcraa recording software [lcraa-warden]">
+    <meta name="author" content="Antares, LLC">
+    <title>Home - eClerks LA</title>
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="https://cdn.lcraa.net/icons/eClerks-registered/manifest.json"> 
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5T9BG2J9HC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5T9BG2J9HC');
+    </script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.lcraa.net/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.lcraa.net/lib/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/eClerks/fonts.css">
+    <link rel="stylesheet" href="/css/eClerks/dtp_landing1.css">
+    <link rel="stylesheet" href="/css/eClerks/dtp_landing2.css">
+    <link rel="stylesheet" href="/css/eClerks/landing.css">
+    <link rel="stylesheet" href="/css/mvc-grid/mvc-grid.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap">
+
+    <!-- Responsive Layout -->
+    <style>
+        .phone { display: none; }
+        .phone-off { display: contents; }
+
+        @media (max-width: 767px) {
+            .phone { display: block; }
+            .phone-off { display: none; }
+        }
+    </style>
+</head>
+
+<body class="modal-open" style="padding-right: 15px;">
+    <!-- Modal Placeholder (Login Modal) -->
+    <div id="modal-placeholder">
+        <div class="modal show" id="statewidePortalDecisionTree" tabindex="-1" role="dialog" aria-modal="true" style="display:block; padding-right:15px;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Statewide Portal Search</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="statewide-portal-decision" action="/home/statewideportaldecisiontree" method="post">
+                            <input name="IsValid" type="hidden" value="True">
+                            <label id="misc-error" class="text-danger"></label>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-group input-group login-border">
+                                            <span class="fas fa-user input-group-addon login-ico"></span>
+                                            <input class="form-control login-input" type="email" name="UserEmail" id="UserEmail" placeholder="email address" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-group input-group login-border">
+                                            <span class="fas fa-lock input-group-addon login-ico"></span>
+                                            <input class="form-control login-input" type="password" name="UserPassword" id="UserPassword" placeholder="password" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-4">
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <button id="login" class="btn btn-block btn-lg btn-primary card-button-login" type="button">LOGIN</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr class="statewide-portal-decision-tree-hr">
+
+                                <div class="text-center">
+                                    <div>Don't have an account?</div>
+                                    <div><button type="button" class="btn btn-small gray-btn" onclick="location.href='/Identity/Account/Register'">Sign Up Here</button></div>
+                                </div>
+                            </div>
+
+                            <input name="__RequestVerificationToken" type="hidden" value="YOUR_TOKEN_HERE">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="topNav bg-light border-bottom py-2">
+            <div class="container d-flex justify-content-between align-items-center">
+                <a href="/home" title="Home">
+                    <img src="https://cdn.lcraa.net/images/eClerks-registered.png" alt="eClerks LA logo" class="header-logo">
+                </a>
+                <nav>
+                    <a class="nav-link d-inline-block px-2" href="/home">Home</a>
+                    <a class="nav-link d-inline-block px-2" href="/about">About LCRAA</a>
+                    <a class="nav-link d-inline-block px-2" href="/contact">Need Help?</a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Login Form in Header -->
+        <div class="header-login bg-white">
+            <div class="container">
+                <form id="account_header" method="post" action="/home/login" class="form-inline">
+                    <div class="form-group mx-1">
+                        <input class="form-control" type="email" name="Email" placeholder="email address" required>
+                    </div>
+                    <div class="form-group mx-1">
+                        <input class="form-control" type="password" name="Password" placeholder="password" required>
+                    </div>
+                    <div class="form-group mx-1">
+                        <button class="btn btn-primary" type="submit">LOGIN</button>
+                    </div>
+                    <input type="hidden" name="__RequestVerificationToken" value="YOUR_TOKEN_HERE">
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Welcome Banner -->
+    <section class="text-center bg-light py-5">
+        <h1 class="display-4">Welcome to eClerks LA</h1>
+        <h2 class="lead">Providing options to do business with the Louisiana Clerks of Court</h2>
+    </section>
+
+    <!-- Main Section Placeholder -->
+    <main class="container py-4">
+        <p>This is a placeholder. You can include your actual modules, cards, or links here.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-white border-top py-3 mt-5">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div>
+                <a href="https://www.antaresnet.com/" target="_blank" class="text-decoration-none">
+                    <small>powered by</small><br>
+                    <img src="/img/eClerks/logo.svg" alt="Antares Logo" height="30">
+                </a>
+            </div>
+            <div class="text-center">
+                <p class="mb-1">Louisiana Clerks' Remote Access Authority</p>
+                <p class="mb-1">10202 Jefferson Hwy. Building A | Baton Rouge, LA 70809</p>
+                <a href="/privacy" class="text-dark mx-2">Privacy Policy</a>
+                <a href="/terms" class="text-dark mx-2">Terms of Service</a>
+                <a href="/contact" class="text-dark mx-2">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.lcraa.net/lib/jquery/jquery.min.js"></script>
+    <script src="https://cdn.lcraa.net/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.lcraa.net/lib/feather-icons/dist/feather.min.js"></script>
+    <script src="/js/mvc-grid/mvc-grid.js"></script>
+    <script src="/js/masked-input/jquery.maskedinput.min.js"></script>
+    <script src="/js/holder/holderjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.3.200/build/pdf.min.js"></script>
+    <script src="/js/eClerks/landing.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>

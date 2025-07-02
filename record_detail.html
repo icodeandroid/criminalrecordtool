@@ -1,0 +1,21 @@
+{% extends 'scraper/base.html' %}
+
+{% block content %}
+<h2>Record Details</h2>
+
+<table class="table table-bordered">
+    <tr><th>Name</th><td>{{ record.defendant_name }}</td></tr>
+    <tr><th>Birth Date</th><td>{{ record.birth_date }}</td></tr>
+    <tr><th>Sex</th><td>{{ record.sex }}</td></tr>
+    <tr><th>Race</th><td>{{ record.race }}</td></tr>
+    <tr><th>Case #</th><td>{{ record.case_number }}</td></tr>
+    <tr><th>Date Filed</th><td>{{ record.date_filed }}</td></tr>
+    <tr><th>Charges</th><td><pre>{{ record.charges }}</pre></td></tr>
+    <tr><th>Arrest Date</th><td>{{ record.arrest_date }}</td></tr>
+    <tr><th>Parish</th><td>{{ record.parish }}</td></tr>
+    <tr><th>Alert Available</th><td>{{ record.alert_available }}</td></tr>
+    <tr><th>Scraped On</th><td>{{ record.scraped_timestamp }}</td></tr>
+</table>
+
+<a href="/" class="btn btn-secondary">← Back to List</a>
+{% endblock %}
