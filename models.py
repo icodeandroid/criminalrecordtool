@@ -13,7 +13,8 @@ class CriminalRecord(models.Model):
     def __str__(self):
         return f"{self.name} - {self.case_number}"
     
-
+ # In models.py
+parish = models.CharField(max_length=100, blank=True, null=True)
 
 
 class CriminalRecord(models.Model):
